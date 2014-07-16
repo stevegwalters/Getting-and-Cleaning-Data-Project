@@ -36,4 +36,4 @@ data$activity <- factor(data$activity, labels=tolower(activity_labels$V2))
 
 # Calculate averages across columns based on subject and activity
 newData <- ddply(data, .(id, activity), numcolwise(mean))
-write.table(newData, file="./output.csv")
+write.table(newData, file="./output.txt")
